@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="get">
+    <input type="text" placeholder="kiriting" name="qidiruv_sozi">
+    <button>Qidirish</button>
+</form>
+{% for i in fan %}
+<h1>{{i}}</h1>
+<a href="/fan_ochir/{{i.id}}"><button>O'chirish</button></a>
+{% endfor %}
+</body>
+</html>
