@@ -12,5 +12,17 @@
 {% for i in ustoz %}
 <h1>{{i}}</h1>
 {% endfor %}
+<form method="post"> {% csrf_token %}
+    <input type="text" placeholder="ism kiriting" name="ism">
+    <input type="text" placeholder="jins kiriting" name="jins">
+    <input type="number" placeholder="yosh kiriting" name="yosh">
+    <input type="text" placeholder="daraja kiriting" name="daraja">
+    <select name="fan">
+        {% for i in fan %}
+        <option value="{{i.id}}">{{i}}</option>
+        {% endfor %}
+    </select>
+    <button>Qo'shish</button>
+</form>
 </body>
 </html>
