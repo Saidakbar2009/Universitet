@@ -8,10 +8,12 @@
 {% for i in yonalish %}
 <h1>{{i}}</h1>
 <a href="/yonalish_ochir/{{i.id}}"><button>O'chirish</button></a>
+<a href="/yonalish_update/{{i.id}}"><button>Yangilash</button></a>
 {% endfor %}
 <form method="post">{% csrf_token %}
-    <input type="text" name="nom">
-     <input type="checkbox" name="aktivmi">
+<!--    <input type="text" name="nom">-->
+<!--     <input type="checkbox" name="aktivmi">-->
+    {{ forma }}
     <button>Qo'shish</button>
 </form>
 </body>

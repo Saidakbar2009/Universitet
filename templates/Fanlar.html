@@ -12,15 +12,17 @@
 {% for i in fan %}
 <h1>{{i}}</h1>
 <a href="/fan_ochir/{{i.id}}"><button>O'chirish</button></a>
+<a href="/fan_update/{{i.id}}"><button>Yangilash</button></a>
 {% endfor %}
 <form method="post">{% csrf_token %}
-    <input type="text" placeholder="fan nomi kiriting" name="nom">
-    <select name="yonalish">
-        {% for i in yonalish %}
-        <option value="{{i.id}}">{{i}}</option>
-        {% endfor %}
-    </select>
-    <input type="checkbox" name="asosiymi">
+<!--    <input type="text" placeholder="fan nomi kiriting" name="nom">-->
+<!--    <select name="yonalish">-->
+<!--        {% for i in yonalish %}-->
+<!--        <option value="{{i.id}}">{{i}}</option>-->
+<!--        {% endfor %}-->
+<!--    </select>-->
+<!--    <input type="checkbox" name="asosiymi">-->
+    {{forma}}
     <button>Qo'shish</button>
 </form>
 </body>

@@ -11,7 +11,6 @@ class Fan(models.Model):
     yonalish= models.ForeignKey(Yonalish, on_delete=models.CASCADE)
     asosiy = models.BooleanField()
 class Ustoz(models.Model):
-
     ism = models.CharField(max_length=30)
     jins = models.CharField(max_length=10)
     yosh = models.PositiveSmallIntegerField()

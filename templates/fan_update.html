@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">{% csrf_token %}
+    <input type="text" value="{{fan.nom}}" name="nom">
+    <select name="yonalish">
+        <option value="{{fan.yonalish.id}}">{{fan.yonalish}}</option>
+        {% for i in yonalish %}
+        <option value="{{i.id}}">{{i}}</option>
+        {% endfor %}
+    </select>
+    <button>Yangilash</button>
+</form>
+</body>
+</html>

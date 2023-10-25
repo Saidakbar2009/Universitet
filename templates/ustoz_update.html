@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post"> {% csrf_token %}
+    <input type="text" value="{{ustoz.ism}}" name="ism">
+    <input type="text" value="{{ustoz.jins}}" name="jins">
+    <input type="number" value="{{ustoz.yosh}}" name="yosh">
+    <input type="text" value="{{ustoz.daraja}}" name="daraja">
+    <select name="fan">
+        <option value="{{ustoz.fan.id}}">{{ustoz.fan.nom}}</option>
+        {% for i in fan %}
+        <option value="{{i.id}}">{{i}}</option>
+        {% endfor %}
+    </select>
+    <button>Yangilash</button>
+</form>
+</body>
+</html>
